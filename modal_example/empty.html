@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+fieldset{
+    background: #FCFCFC;
+    padding: 16px;
+    border: 1px solid #D5D5D5;
+}
+.addfields{
+    margin: 10px 0;
+}
+
+#choicesDisplay {
+    padding: 10px;
+    background: rgb(227, 250, 227);
+    border: 1px solid rgb(171, 239, 171);
+    color: rgb(9, 56, 9);
+}
+.remove{
+    background: #C76868;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 21px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 9px;
+    vertical-align: top;
+    line-height: 100%;   
+}
+input[type="text"],
+select{
+    padding:5px;
+}
+</style>
+<!--
+<style>
+.input-group{
+padding-bottom: 15px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.modal-body{
+padding: 15px 80px;
+}
+</style>
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-app>
+
+
+<input type="text" ng-model="name"></p>
+<p ng-bind="name"></p>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor..</p>
+      <p>Ut enim ad..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor..</p>
+      <p>Ut enim ad..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3> 
+      <p>Lorem ipsum dolor..</p>
+      <p>Ut enim ad..</p>
+    </div>
+  </div>
+</div>
+<a data-toggle="modal" href="#download">
+  Launch demo modal
+</a>
+<div class="modal fade" id="download" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+
+      <div class="modal-body">
+              <div ng-app="angularjs-starter" ng-controller="MainCtrl">
+   <fieldset  data-ng-repeat="choice in choices">
+      <select>
+         <option>Mobile</option>
+         <option>Office</option>
+         <option>Home</option>
+      </select>
+      <input type="text" ng-model="choice.name" name="" placeholder="Enter mobile number">
+      <button class="remove" ng-show="$last" ng-click="removeChoice()">-</button>
+   </fieldset>
+   <button class="addfields" ng-click="addNewChoice()">Add fields</button>
+       
+   <div id="choicesDisplay">
+      {{ choices }}
+   </div>
+</div>
+
+
+              <!--<label class="btn btn-primary" for="my-file-selector">
+              <input id="my-file-selector" type="file" style="display:none" 
+              onchange="$('#upload-file-info').html(this.files[0].name)">
+              Button Text Here
+              </label>
+              <span class='label label-info' id="upload-file-info"></span>-->
+                    <!--<div class="input-group">
+                  <input type="file" id="files-input-upload" style="display:none">
+                  <input type="text" id="fake-file-input-name" disabled="disabled" placeholder="File not selected" class="form-control">
+                   <span class="input-group-btn">
+                    <button id="fake-file-button-browse" type="button" class="btn btn-default">
+                      <span class="glyphicon glyphicon-file"></span>
+                    </button>
+                  </span>
+                    </button>
+                  </span>
+                </div>
+                 <div class="input-group">
+                  <input type="file" id="files-input-upload" style="display:none">
+                  <input type="text" id="fake-file-input-name" disabled="disabled" placeholder="File not selected" class="form-control">
+                   <span class="input-group-btn">
+                    <button id="fake-file-button-browse" type="button" class="btn btn-default">
+                      <span class="glyphicon glyphicon-file"></span>
+                    </button>
+                  </span>
+                    </button>
+                  </span>
+                </div>-
+                <table>
+    <tr id="bkup_doc_rw">
+        <td align="right">
+            <label class="letter_font" for="bkup_doc_proof">Document &nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file"  ng-click="clear()" name="bkup_doc_proof" id="bkup_doc_proof" required />&nbsp;&nbsp;&nbsp;<a class="letter_font" style="text-decoration:none;cursor:pointer;" href="#" id="addNew">Add more </a>
+
+
+        </td>
+    </tr>
+</table>-->
+
+
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal end-->
+<!--modal begin-->
+<div>
+<a data-toggle="modal" href="#download1">
+  Launch demo modal
+</a>
+<div class="modal fade" id="download1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+          <div ng-app="angularjs-starter" ng-controller="MainCtrl">
+           <fieldset  data-ng-repeat="choice in choices">
+              <select>
+                 <option>Mobile</option>
+                 <option>Office</option>
+                 <option>Home</option>
+              </select>
+              <input type="text" ng-model="choice.name" name="" placeholder="Enter mobile number">
+              <button class="remove" ng-show="$last" ng-click="removeChoice()">-</button>
+           </fieldset>
+           <button class="addfields" ng-click="addNewChoice()">Add fields</button>
+               
+           <div id="choicesDisplay">
+              {{ choices }}
+           </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--modal end -->
+
+              <!--<label class="btn btn-primary" for="my-file-selector">
+              <input id="my-file-selector" type="file" style="display:none" 
+              onchange="$('#upload-file-info').html(this.files[0].name)">
+              Button Text Here
+              </label>
+              <span class='label label-info' id="upload-file-info"></span>-->
+                    <!--<div class="input-group">
+                  <input type="file" id="files-input-upload" style="display:none">
+                  <input type="text" id="fake-file-input-name" disabled="disabled" placeholder="File not selected" class="form-control">
+                   <span class="input-group-btn">
+                    <button id="fake-file-button-browse" type="button" class="btn btn-default">
+                      <span class="glyphicon glyphicon-file"></span>
+                    </button>
+                  </span>
+                    </button>
+                  </span>
+                </div>
+                 <div class="input-group">
+                  <input type="file" id="files-input-upload" style="display:none">
+                  <input type="text" id="fake-file-input-name" disabled="disabled" placeholder="File not selected" class="form-control">
+                   <span class="input-group-btn">
+                    <button id="fake-file-button-browse" type="button" class="btn btn-default">
+                      <span class="glyphicon glyphicon-file"></span>
+                    </button>
+                  </span>
+                    </button>
+                  </span>
+                </div>-->
+                <!--<table>
+    <tr id="bkup_doc_rw">
+        <td align="right">
+            <label class="letter_font" for="bkup_doc_proof">Document &nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="bkup_doc_proof" id="bkup_doc_proof" required />&nbsp;&nbsp;&nbsp;<a class="letter_font" style="text-decoration:none;cursor:pointer;" href="#" id="addNew">Add more </a>
+
+        </td>
+    </tr>
+</table>-->
+
+
+ 
+   
+<!--<script type="text/javascript">
+// Fake file upload
+document.getElementById('fake-file-button-browse').addEventListener('click', function() {
+  document.getElementById('files-input-upload').click();
+});
+
+document.getElementById('files-input-upload').addEventListener('change', function() {
+  document.getElementById('fake-file-input-name').value = this.value;
+  
+  document.getElementById('fake-file-button-upload').removeAttribute('disabled');
+});
+</script>
+-->
+
+ <!--<script type="text/javascript">
+ var fle_cnt = 1;
+$('#addNew').click(function (event) {
+    fle_cnt++;
+    event.preventDefault();
+    $('#bkup_doc_rw').after('<tr><td>&nbsp;</td><td><input type="file" name="bkup_doc_proof" id="bkup_doc_proof_' + fle_cnt + '"><a class="letter_font remNew" style="text-decoration: none;cursor: pointer;" href="#">Remove</a></td></tr>');
+});
+
+$(document).on('click', '.remNew', function (event) {
+    event.preventDefault();
+    $(this).closest('tr').remove();
+});
+</script>-->
+
+
+</body>
+</html>

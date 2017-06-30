@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+fieldset{
+    background: #FCFCFC;
+    padding: 16px;
+    border: 1px solid #D5D5D5;
+}
+.addfields{
+    margin: 10px 0;
+}
+
+#choicesDisplay {
+    padding: 10px;
+    background: rgb(227, 250, 227);
+    border: 1px solid rgb(171, 239, 171);
+    color: rgb(9, 56, 9);
+}
+.remove{
+    background: #C76868;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 21px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 9px;
+    vertical-align: top;
+    line-height: 100%;   
+}
+input[type="text"],
+select{
+    padding:5px;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="ui-bootstrap-2.5.0.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-app="angularjs-starter" >
+
+
+<input type="text" ng-model="name"></p>
+<p ng-bind="name"></p>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor..</p>
+      <p>Ut enim ad..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor..</p>
+      <p>Ut enim ad..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3> 
+      <p>Lorem ipsum dolor..</p>
+      <p>Ut enim ad..</p>
+    </div>
+  </div>
+</div>
+<!--<a data-toggle="modal" href="#download">
+  Launch demo modal
+</a>
+<div class="modal fade" id="download" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+
+      <div class="modal-body">
+              <div ng-app="angularjs-starter" ng-controller="MainCtrl">
+   <fieldset  data-ng-repeat="choice in choices">
+      <select>
+         <option>Mobile</option>
+         <option>Office</option>
+         <option>Home</option>
+      </select>
+      <input type="text" ng-model="choice.name" name="" placeholder="Enter mobile number">
+      <button class="remove" ng-show="$last" ng-click="removeChoice()">-</button>
+   </fieldset>
+   <button class="addfields" ng-click="addNewChoice()">Add fields</button>
+       
+   <div id="choicesDisplay">
+      {{ choices }}
+   </div>
+</div>
+
+
+             
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<!-- modal end-->
+<!--modal begin-->
+<div>
+<a href="" data-toggle="modal" data-target="#download1">
+  Launch demo modal
+</a>
+<div class="modal fade" id="download1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      <input ng-click="showModal()" value="Open MOdal" type="button"/>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body" >
+          <div ng-controller="MainCtrl">
+           <fieldset  data-ng-repeat="choice in choices">
+              <select>
+                 <option>Mobile</option>
+                 <option>Office</option>
+                 <option>Home</option>
+              </select>
+              <input type="text" ng-model="choice.name" name="" placeholder="Enter mobile number">
+              <button class="remove" ng-show="$last" ng-click="removeChoice()">-</button>
+           </fieldset>
+           <button class="addfields" ng-click="addNewChoice()">Add fields</button>
+               
+           <div id="choicesDisplay">
+              {{ choices }}
+           </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+   <script type="text/ng-template" id="test2.html">
+        <div class="modal-header">
+            <h3>The  modal!</h3>
+        </div>
+        <div class="modal-body" >
+            Having multiple modals open at once is probably bad UX but it's technically possible.
+        </div>
+    </script>
+
+</body>
+</html>
